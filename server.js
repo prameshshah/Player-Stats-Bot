@@ -187,7 +187,7 @@ async function startServer() {
 
             res.json({ response });
         });
-
+        const PORT = process.env.PORT || 3000;  // Use the Heroku port, or fall back to 3000 locally
         app.listen(port, () => {
             console.log(`Server running at http://localhost:${port}`);
         });
